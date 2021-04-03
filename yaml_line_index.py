@@ -20,8 +20,4 @@ if __name__ == '__main__':
     print(d.lc)
     print(d['foo'].lc)
     print(d['foo']['bar'].lc)
-    pprint(dir(d['foo']['bar'][3]))
-    """
-    Through experimentation, I found that only **collections** have the 'lc' property....
-    individual values do not.
-    """
+    print(d['foo'].lc.line)
