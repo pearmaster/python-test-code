@@ -21,3 +21,4 @@ if __name__ == '__main__':
     print(d['foo'].lc)
     print(d['foo']['bar'].lc)
     print(d['foo'].lc.line)
+    print(d['foo']['bar'].lc.item(3))
