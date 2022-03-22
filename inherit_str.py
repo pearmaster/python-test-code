@@ -1,6 +1,9 @@
 class MyString(str):
-    def __new__(cls, *args, **kwargs):
-        obj = str.__new__(cls, *args, **kwargs)
+    def __new__(cls, *args):
+        if isinstance(args[0], cls):
+            print(f"{args[0]} is already a {cls}")
+            return args[0]
+        obj = str.__new__(cls, *args)
         obj._evaluated = False
         return obj
 
@@ -27,3 +30,13 @@ if __name__ == "__main__":
     a.evaluated = False
     assert a.evaluated is False
     assert b.evaluated is True
+    c = MyString(a)
+    d = MyString(b)
+    assert c.evaluated is False
+    assert d.evaluated is True
+    c.evaluated = True
+    d.evaluated = False
+    assert a.evaluated is True
+    assert b.evaluated is False
+    assert c.evaluated is True
+    assert d.evaluated is False
