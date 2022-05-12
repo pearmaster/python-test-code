@@ -45,6 +45,8 @@ class A:
             o().speak()
 
 if __name__ == '__main__':
+    print("HELLO")
+
     a = A()
     a.add(1)
     a.reference_to(2, 1)
