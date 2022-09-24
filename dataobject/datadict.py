@@ -5,7 +5,9 @@ class Foo:
     a: int
     b: str
 
-f = Foo(1, 2)
+d = {"b":"hello", "a":1,}
+
+f = Foo(**d)
 
 print(f.a)
 
