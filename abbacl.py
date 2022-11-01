@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import inspect
 
 class TheBase(ABC):
 
@@ -36,3 +37,4 @@ if __name__ == '__main__':
     print(f"{tc.foo()} {tc.yaz()} {tc.bar()}")
     print(f"Is TheChild a subclass {issubclass(TheChild, TheBase)} {issubclass(TheChild, TheBase)}")
     print(f"Is tc instance an instance of {isinstance(tc, TheBase)} {isinstance(tc, TheBase)}")
+    print(inspect.getclasstree([TheChild]))
