@@ -3,3 +3,4 @@ ruamel.yaml==0.17.2
 ruamel.yaml.clib==0.2.2
 pyinotify
 black
+pytest
