@@ -4,3 +4,4 @@ ruamel.yaml.clib==0.2.2
 pyinotify
 black
 pytest
+aiohttp
